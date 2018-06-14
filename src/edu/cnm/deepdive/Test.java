@@ -6,8 +6,29 @@ import java.util.List;
 public class Test {
 
   public static void main(String[] args) {
-    List<Canis> kennel = fillKennel();
-    inspectkennel(kennel);
+    new Object() {
+
+      private int data = computeSomething();
+
+      {
+        doSomething();
+        System.out.println(getClass().getName());
+      }
+      private void doSomething() {
+        System.out.println("::doSomething");
+      }
+
+      private int computeSomething() {
+        System.out.println("::computeSomething");
+        return 0;
+      }
+    };
+
+//    System.out.println(Canis.getDescription());
+//    CanisLupusFamiliaris spot = new CanisLupusFamiliaris();
+//    CanisLupus buck = new CanisLupus();
+//    List<Canis> kennel = fillKennel();
+//    inspectkennel(kennel);
   }
 
   private static List<Canis> fillKennel() {

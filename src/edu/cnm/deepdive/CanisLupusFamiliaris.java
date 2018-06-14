@@ -4,6 +4,18 @@ public class CanisLupusFamiliaris extends CanisLupus {
 
   private boolean goodBoy = true;
 
+  static {
+    System.out.println("Canis lupus familiaris static initialization block");
+  }
+
+  public CanisLupusFamiliaris() {
+    System.out.println("CanisLupisFamiliaris::new");
+  }
+
+  {
+    System.out.println("CanisLupisFamiliaris instance initialization block");
+  }
+
   public boolean isGoodBoy() {
     return goodBoy;
   }
